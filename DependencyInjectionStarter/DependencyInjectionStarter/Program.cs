@@ -11,8 +11,12 @@ namespace DependencyInjectionStarter
     {
         static void Main(string[] args)
         {
-            var rockBand = new RockBand();
-            rockBand.DoSoundCheck();
+            var rockBand1 = new RockBand(new Guitar(), new Guitar(), new BassGuitar(), new Drums(), new Vocal());
+            var rockBand2 = new RockBand(new Guitar(), new BassGuitar(), new Drums(), new Vocal(), new Keyboard());
+            Console.WriteLine("--band 1---");
+            rockBand1.DoSoundCheck();
+            Console.WriteLine("--band 2---");
+            rockBand2.DoSoundCheck();
             Console.ReadLine();
         }
     }

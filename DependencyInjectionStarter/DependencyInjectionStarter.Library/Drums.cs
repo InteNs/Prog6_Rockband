@@ -5,11 +5,16 @@ using System.Text;
 
 namespace DependencyInjectionStarter.Library
 {
-    public class Drums
+    public class Drums : IInstrument
     {
         public string Drum()
         {
             return "Boom chack, Boom Boom chack";
+        }
+
+        public string MakeSound()
+        {
+            return Drum();
         }
     }
 }

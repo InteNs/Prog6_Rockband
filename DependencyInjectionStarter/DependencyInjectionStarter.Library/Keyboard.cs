@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DependencyInjectionStarter.Library
 {
-    public class Vocal : IInstrument
+    public class Keyboard : IInstrument
     {
-        public string Sing()
+        public string PlayKeys()
         {
-            return "Traaa laaa laaa la la";
+            return "pling plong pling";
         }
 
         public string MakeSound()
         {
-            return Sing();
+            return PlayKeys();
         }
     }
 }
